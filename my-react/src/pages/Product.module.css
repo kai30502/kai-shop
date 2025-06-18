@@ -1,0 +1,38 @@
+.title{
+    color: gray;
+}
+
+.product_area{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product_card{
+    text-align: center;
+    width: 30%;
+    height: auto;
+    color: gray;
+}
+
+.product_card img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.addToCartButton{
+    color: #A79389;
+    border: none;
+    background-color: #EFE5DC;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+
+.addToCartButton:hover{
+    background-color: #96847B;
+    color: #EFE5DC;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

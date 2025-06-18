@@ -1,0 +1,81 @@
+.login{
+    display: flex;
+    align-items: center;
+    background-color: #F3EEEA;
+    margin: 50px 0;
+}
+
+.logininput{
+    width: 50%;
+    text-align: center;
+    color: #87776F;
+}
+
+.description {
+    background-image: url('login.jpg');
+    height: 640px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+    padding-left: 50px;
+    color: rgb(80, 80, 80);
+}
+
+.title{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.description ul{
+    padding: 0;
+    margin-top: 16px;
+}
+
+.description ul li{
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.description ul li span{
+    margin-left: 5px;
+}
+
+.input {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #B5A096;
+    background: transparent;
+    outline: none;
+    padding: 8px 4px; 
+}
+
+.submit{
+    width: 50%;
+    border-radius: 50px;
+    border: 1px solid #B5A096;
+    background-color: transparent;
+    margin-top: 30px;
+    padding: 10px 60px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: #B5A096;
+    transition: background-color 0.2s ease;
+}
+
+.register{
+    color: rgb(187, 175, 164);
+    margin-top: 20px;
+}
+
+.register a {
+    color: #87776F;
+    text-decoration: none;
+    font-weight: bold;
+}

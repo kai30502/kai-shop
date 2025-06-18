@@ -1,0 +1,19 @@
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0px;
+    background: linear-gradient(to bottom, #F3EEEA, #FBFEFB);
+}
+
+.li{
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;  
+}
+
+.li:hover{
+    color: #D0B8AC;
+}
+
