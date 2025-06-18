@@ -4,33 +4,32 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer_right}>
-        <p>follow us on</p>
-        <a href="#" className={styles.icon}><i className='bi bi-facebook'></i></a>
-        <a href="#" className={styles.icon}><i className='bi bi-instagram'></i></a>
-        <a href="#" className={styles.icon}><i className='bi bi-line'></i></a>
-      </div>
-      <div className={styles.footer_left}>
+    <footer className={styles.footer + ' container-fluid'}>
+      <div className="row">
+        <div className={styles.footer_left + ' col-6 col-md-6 d-flex justify-content-between flex-wrap'}>
+          <ul>
+            <li className={styles.title}>關於KAI</li>
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="#">門市據點</a></li>
+          </ul>
+          <ul>
+            <li className={styles.title}>購物須知</li>
+            <li><a href="#">訂購流程</a></li>
+            <li><a href="#">十天鑑賞期</a></li>
+          </ul>
+          <ul>
+            <li className={styles.title}>聲明條款</li>
+            <li><a href="#">隱私權保護</a></li>
+            <li><a href="#">工作條款</a></li>
+          </ul>
+        </div>
 
-        <ul>
-          <li className={styles.title}>關於KAI</li>
-          <li><a href="#">品牌故事</a></li>
-          <li><a href="#">門市據點</a></li>
-        </ul>
-
-        <ul>
-          <li className={styles.title}>購物須知</li>
-          <li><a href="#">訂購流程</a></li>
-          <li><a href="#">十天鑑賞期</a></li>
-        </ul>
-
-        <ul>
-          <li className={styles.title}>聲明條款</li>
-          <li><a href="#">隱私權保護</a></li>
-          <li><a href="#">工作條款</a></li>
-        </ul>
-
+        <div className="col-6 col-md-6 text-end">
+          <p>follow us on</p>
+          <a href="#" className={styles.icon}><i className='bi bi-facebook'></i></a>
+          <a href="#" className={styles.icon}><i className='bi bi-instagram'></i></a>
+          <a href="#" className={styles.icon}><i className='bi bi-line'></i></a>
+        </div>
       </div>
 
       <div className={styles.buttom}>
