@@ -18,10 +18,12 @@ router.get('/', async (req, res) => {
     try {
         connection = await mysql.createConnection(dbconfig);
         let sql = 'SELECT * FROM products';
+        let parms = [];
         if (category) {
             sql += ' WHERE category = ?';
+            parms.push(category);
         }
-        const [rows] = await connection.execute(sql, [category]);
+        const [rows] = await connection.execute(sql, parms);
         res.json(rows);
     } catch (err) {
         console.log("連線失敗", err);
