@@ -5,8 +5,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 function Footer() {
   return (
     <footer className={styles.footer + ' container-fluid'}>
-      <div className="row">
-        <div className={styles.footer_left + ' col-6 col-md-6 d-flex justify-content-between flex-wrap'}>
+      <div className="row align-items-center">
+        <div className={styles.footer_left + ' col-6 col-md-6'}>
           <ul>
             <li className={styles.title}>關於KAI</li>
             <li><a href="#">品牌故事</a></li>
@@ -24,7 +24,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-6 col-md-6 text-end">
+        <div className="col-6 col-md-6 text-center">
           <p>follow us on</p>
           <a href="#" className={styles.icon}><i className='bi bi-facebook'></i></a>
           <a href="#" className={styles.icon}><i className='bi bi-instagram'></i></a>
