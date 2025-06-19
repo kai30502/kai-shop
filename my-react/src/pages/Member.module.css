@@ -1,0 +1,19 @@
+.member{
+    color: gray;
+}
+.cartBtn{
+    color: #D0B8AC;
+    border: 1px solid #D0B8AC;
+}
+
+.cartBtn:hover {
+    background: #D0B8AC;
+    color: white;
+    border: 1px solid #D0B8AC;
+}
+
+.cartBtn:active {
+    background: #B4846C !important;;
+    color: white;
+    border: 1px solid #B4846C !important;;
+}

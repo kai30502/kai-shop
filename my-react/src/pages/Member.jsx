@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import styles from './Member.module.css';
 
 function Member({ setMember }) {
 
@@ -17,12 +18,12 @@ function Member({ setMember }) {
     }
 
   return (
-    <div>
+    <div className={`container ${styles.member}`}>
         <h1>會員專區</h1>
         <p>歡迎來 {member?.full_name} 到會員專區！</p>
 
-        <button onClick={handleCart}>你的購物車</button><br /><br />
-        <button onClick={handleLogout}>登出</button>
+        <button onClick={handleCart} className={`btn btn-outline-primary ${styles.cartBtn}`}>你的購物車</button><br /><br />
+        <button onClick={handleLogout} className={`btn btn-outline-primary ${styles.cartBtn}`}>登出</button>
     </div>
   )
 }

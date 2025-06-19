@@ -5,7 +5,7 @@ function Nav({member}) {
 
   return (
     <nav  className={styles.nav}>
-        <div className="container d-flex justify-content-evenly ">
+        <div className="container d-flex justify-content-evenly">
           <Link to="/" className={styles.li}>首頁</Link>
           <Link to="/men" className={styles.li}>男裝</Link>
           <Link to="/women" className={styles.li}>女裝</Link> 

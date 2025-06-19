@@ -22,8 +22,8 @@ function Cart() {
     }, [member, navigate]);
     
   return (
-    <div>
-        <h1>您的購物車</h1>
+    <div className="container">
+        <h1 style={{color: 'gray'}}>您的購物車</h1>
 
         <table className="table table-striped">
             <thead>
