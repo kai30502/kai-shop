@@ -1,10 +1,10 @@
 .title{
     color: gray;
+    margin: 20px 0;
 }
 
 .product_area{
     display: flex;
-    gap: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
 }

@@ -15,7 +15,7 @@ function Women() {
   },[]);
 
   return (
-    <div>
+    <div className='container'>
       <h1 className={styles.title}>女裝</h1>
       <div className={styles.product_area}>
           {products.map(product => (

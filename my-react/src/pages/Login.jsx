@@ -35,50 +35,52 @@ function Login({ setMember }) {
     
 
   return (
-    <div className={styles.login}>
-        <div className={styles.logininput}>
-            <h2>登入</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    required
-                    className={styles.input}
-                    placeholder="電子信箱"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    required
-                    className={styles.input}
-                    placeholder="密碼"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <button type="submit" className={styles.submit}>登入</button>
-                </div>
-                <div className={styles.register}>
-                    <p>還沒有帳號？ <Link to="/register">註冊</Link></p>
-                </div>
-            </form>
-        </div>
-        <div className={styles.description}>
-            <h3 className={styles.title}>Log in to Kai Shop.</h3>
-            <h5>Log in to access more features.</h5>
-            <ul>
-                <li><i className="bi bi-check-circle-fill"></i><span>Personalized Dashboard</span></li>
-                <li><i className="bi bi-check-circle-fill"></i><span>Faster Checkout</span></li>
-                <li><i className="bi bi-check-circle-fill"></i><span>Exclusive Offers</span></li>
-            </ul>
+    <div className='container'>
+        <div className={styles.login}>
+            <div className={styles.logininput}>
+                <h2>登入</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        required
+                        className={styles.input}
+                        placeholder="電子信箱"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        className={styles.input}
+                        placeholder="密碼"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <button type="submit" className={styles.submit}>登入</button>
+                    </div>
+                    <div className={styles.register}>
+                        <p>還沒有帳號？ <Link to="/register">註冊</Link></p>
+                    </div>
+                </form>
+            </div>
+            <div className={styles.description}>
+                <h3 className={styles.title}>Log in to Kai Shop.</h3>
+                <h5>Log in to access more features.</h5>
+                <ul>
+                    <li><i className="bi bi-check-circle-fill"></i><span>Personalized Dashboard</span></li>
+                    <li><i className="bi bi-check-circle-fill"></i><span>Faster Checkout</span></li>
+                    <li><i className="bi bi-check-circle-fill"></i><span>Exclusive Offers</span></li>
+                </ul>
+            </div>
         </div>
     </div>
   )

@@ -15,7 +15,7 @@ function Child() {
   },[]);
 
   return (
-    <div>
+    <div className='container'>
       <h1 className={styles.title}>童裝</h1>
       <div className={styles.product_area}>
           {products.map(product => (
