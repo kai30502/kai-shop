@@ -1,26 +1,17 @@
 .login{
-    display: flex;
-    align-items: center;
-    background-color: #F3EEEA;
-    margin: 50px 0;
+        background: linear-gradient(to top, rgba(135, 119, 111, 0) 0%, #F3EEEA 20%, rgba(135, 119, 111, 0) 100%);
 }
 
 .logininput{
-    width: 50%;
     text-align: center;
     color: #87776F;
 }
 
 .description {
-    background-image: url('login.jpg');
-    height: 640px;
-    width: 800px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-blend-mode: lighten;
-    padding-left: 50px;
     color: rgb(80, 80, 80);
 }
 
@@ -78,4 +69,26 @@
     color: #87776F;
     text-decoration: none;
     font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .login{
+        background: #F3EEEA;
+    }
+
+    .logininput {
+        padding-top: 0;
+    }
+
+    .description{
+        height: 640px;
+        padding-left: 50px;
+        background-image: url('login.jpg');
+        background-color: rgba(255, 255, 255, 0.8);
+        background-blend-mode: lighten;
+    }
+    
+    .login{
+        margin: 50px 0;
+    }
 }

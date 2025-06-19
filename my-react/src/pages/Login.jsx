@@ -36,8 +36,8 @@ function Login({ setMember }) {
 
   return (
     <div className='container'>
-        <div className={styles.login}>
-            <div className={styles.logininput}>
+        <div className={styles.login + ' row'}>
+            <div className={styles.logininput + ' order-2 order-md-1 col-12 col-md-6 d-flex flex-column justify-content-center'}>
                 <h2>登入</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -72,7 +72,7 @@ function Login({ setMember }) {
                     </div>
                 </form>
             </div>
-            <div className={styles.description}>
+            <div className={styles.description + ' order-1 order-md-2 col-12 col-md-6 '}>
                 <h3 className={styles.title}>Log in to Kai Shop.</h3>
                 <h5>Log in to access more features.</h5>
                 <ul>
