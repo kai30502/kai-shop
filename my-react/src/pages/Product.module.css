@@ -3,15 +3,8 @@
     margin: 20px 0;
 }
 
-.product_area{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .product_card{
     text-align: center;
-    width: 30%;
     height: auto;
     color: gray;
 }
@@ -29,7 +22,6 @@
     cursor: pointer;
     padding: 5px 10px;
 }
-
 
 .addToCartButton:hover{
     background-color: #96847B;

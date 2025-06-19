@@ -26,7 +26,7 @@ function ProductCard({ product }) {
 
 
   return (
-    <div className={styles.product_card}>
+    <div className={styles.product_card + ' col-6 col-md-3'}>
       <img src={product.image_url} alt={product.description} />
       <p>{product.name}</p>
       <p>NT：${product.price}</p>

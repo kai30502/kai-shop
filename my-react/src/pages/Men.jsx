@@ -17,7 +17,7 @@ function Men() {
   return (
     <div className='container'>
       <h1 className={styles.title}>男裝</h1>
-      <div className={styles.product_area}>
+      <div className={styles.product_area + ' row g-3'}>
           {products.map(product => (
             <ProductCard key={product.product_id} product={product} />
           ))}
