@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+// const port = 3000;
 
 app.use(express.json());
 app.use(cors());
@@ -17,8 +17,9 @@ app.use('/api/products', productsRoutes);
 app.use('/api/members', membersRoutes);
 app.use('/api/cart', cartRoutes);
 
-app.listen(
-    port, () => {
-        console.log(`伺服器已啟動於 http://localhost:${port}`);
-    }
-)
+// localhost關閉，改線上Railway Database
+// app.listen(
+//     port, () => {
+//         console.log(`伺服器已啟動於 http://localhost:${port}`);
+//     }
+// )
