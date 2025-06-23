@@ -13,7 +13,7 @@ function Login({ setMember }) {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:3000/api/members/login', {
+            const res = await fetch('https://kai-shop.onrender.com/api/members/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })

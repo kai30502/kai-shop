@@ -10,7 +10,7 @@ function ProductCard({ product }) {
     return null;
   }
 
-  await fetch('http://localhost:3000/api/cart/add', {
+  await fetch('https://kai-shop.onrender.com/api/cart/add', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

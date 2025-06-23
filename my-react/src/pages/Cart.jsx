@@ -14,7 +14,7 @@ function Cart() {
         }
         
         async function getCartItems() {
-        const res = await fetch(`http://localhost:3000/api/cart/items/${member.id}`);
+        const res = await fetch(`https://kai-shop.onrender.com/api/cart/items/${member.id}`);
         const data = await res.json();
         setCartItems(data);
         }
