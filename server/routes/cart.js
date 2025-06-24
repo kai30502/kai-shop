@@ -71,4 +71,36 @@ router.get('/items/:member_id', async (req, res) => {
   }
 });
 
+// 更新購物車商品數量API
+router.post('/update/:member_id/:product_id', async (req, res) => {
+    const { member_id, product_id } = req.params;
+    const { quantity } = req.body;
+    let connection;
+
+    try {
+        connection = await mysql.createConnection(dbconfig);
+        await connection.execute(
+            'UPDATE cart_items SET quantity = ? WHERE member_id = ? AND product_id = ?',
+            [quantity, member_id, product_id]
+        );
+        if (quantity === 0) {
+            await connection.execute(
+                'DELETE FROM cart_items WHERE member_id = ? AND product_id = ?',
+                [member_id, product_id]
+            );
+        } else {
+            await connection.execute(
+                'UPDATE cart_items SET quantity = ? WHERE member_id = ? AND product_id = ?',
+                [quantity, member_id, product_id]
+            );
+        }
+        res.status(200).json({ message: '更新成功' });
+    } catch (err) {
+        console.error('更新失敗', err);
+        res.status(500).json({ message: '更新失敗' });
+    } finally {
+        if (connection) await connection.end();
+    }
+});
+
 module.exports = router;
