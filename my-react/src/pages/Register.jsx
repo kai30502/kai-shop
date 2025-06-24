@@ -1,17 +1,27 @@
 import styles from './Login.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import zxcvbn from 'zxcvbn';
+import validator from 'validator';
 
 function Register() {
   const navigate = useNavigate();
+
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [email, setEmail] = useState('');
+
+  const passwordStrength = zxcvbn(password);
+  const strengthLabel = passwordStrength.score === 0 ? '弱' : passwordStrength.score === 1 ? '中' : '強';
+  
+  const isEmailValid = validator.isEmail(email);
+
 
   function handleSubmit(e) {
     e.preventDefault();
 
     const username = e.target.username.value;
-    const password = e.target.password.value;
-    const confirmPassword = e.target.confirmPassword.value;
-    const email = e.target.email.value;
     const full_name = e.target.full_name.value;
 
     if (password !== confirmPassword) {
@@ -19,10 +29,20 @@ function Register() {
       return;
     }
 
+    if (passwordStrength.score < 2) {
+      alert("密碼強度不足，請選擇更強的密碼。");
+      return;
+    }
+
+    if (!isEmailValid) {
+      alert("請輸入有效的電子郵件地址");
+      return;
+    }
+
     async function addMember() {
 
       try {
-      const res = await fetch('https://kai-shop.onrender.com/api/members/add', {
+      const res = await fetch('http://localhost:3000/api/members/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, email, full_name })
@@ -62,8 +82,14 @@ function Register() {
                 required
                 className={styles.input}
                 placeholder="密碼"
+                onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
+            {password && (
+              <div>
+                <label>密碼強度: {strengthLabel}</label>
+              </div>
+            )}
             <div>
                 <input
                 type="password"
@@ -72,6 +98,7 @@ function Register() {
                 required
                 className={styles.input}
                 placeholder="確認密碼"
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 />
             </div>
             <div>
@@ -81,6 +108,7 @@ function Register() {
                 name="email"
                 required
                 className={styles.input}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="電子信箱"  
                 />
             </div>
