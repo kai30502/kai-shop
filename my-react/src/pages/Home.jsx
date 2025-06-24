@@ -5,7 +5,7 @@ import AdSlider from '../AdSlider';
 function Home() {
 
   return (
-    <div className='container text-center'>
+    <div className='container text-center p-0'>
       <div className={styles.ad}>
         <AdSlider />
       </div>

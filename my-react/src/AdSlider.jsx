@@ -15,9 +15,9 @@ function AdSlider() {
 
   return (
     <Slider {...settings}>
-      <div><img src="/ad_1.jpg" alt="ad1" /></div>
-      <div><img src="/ad_2.jpg" alt="ad2" /></div>
-      <div><img src="/ad_3.jpg" alt="ad3" /></div>
+      <div><img src="/ad_1.jpg" alt="ad1" style={{margin : '0 auto'}}/></div>
+      <div><img src="/ad_2.jpg" alt="ad2" style={{margin : '0 auto'}}/></div>
+      <div><img src="/ad_3.jpg" alt="ad3" style={{margin : '0 auto'}}/></div>
     </Slider>
   );
 }
