@@ -84,7 +84,7 @@
     .description{
         height: 640px;
         padding-left: 50px;
-        background-image: url('login.jpg');
+        background-image: url('/login.jpg');
         background-color: rgba(255, 255, 255, 0.8);
         background-blend-mode: lighten;
     }
