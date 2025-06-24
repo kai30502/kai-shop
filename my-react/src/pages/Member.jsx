@@ -20,7 +20,7 @@ function Member({ setMember }) {
   return (
     <div className={`container ${styles.member}`}>
         <h1>會員專區</h1>
-        <p>歡迎來 {member?.full_name} 到會員專區！</p>
+        <p>歡迎 {member?.full_name} 來到會員專區！</p>
 
         <button onClick={handleCart} className={`btn btn-outline-primary ${styles.cartBtn}`}>你的購物車</button><br /><br />
         <button onClick={handleLogout} className={`btn btn-outline-primary ${styles.cartBtn}`}>登出</button>
