@@ -23,3 +23,9 @@ app.use('/api/cart', cartRoutes);
 //         console.log(`伺服器已啟動於 http://localhost:${port}`);
 //     }
 // )
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`伺服器啟動成功，運行於 port ${PORT}`);
+});
