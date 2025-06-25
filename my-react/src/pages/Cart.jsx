@@ -14,11 +14,6 @@ function Cart() {
     const member = JSON.parse(localStorage.getItem('member'));
     const navigate = useNavigate();
 
-    if (!member) {
-        alert("請先登入會員才能查看購物車");
-        return;
-    }
-
     const updateQuantity = async (productId, quantity) => {
         if (quantity < 0) {
             alert("數量不能小於0");
@@ -45,8 +40,14 @@ function Cart() {
     }
     
     useEffect(() => {
+        if (!member) {
+            alert("請先登入會員才能查看購物車");
+            navigate('/login');
+            return;
+        }
         getCartItems();
-    }, [member, navigate]);
+    }, []);
+
     
   return (
     <div className="container">
